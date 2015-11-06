@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_blue"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/announcemnt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="My Reminders"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="invisible" >
+
+                    <EditText
+                        android:id="@+id/search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="Search"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/white" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+       <!--  <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/search_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/search" />
+        </LinearLayout> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_grey"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/remiders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="Reminders"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/alerts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blue"
+                android:text="Alerts"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/reminder_alert"
+                android:drawablePadding="6dp"
+                android:text="Keyword Alert"
+                android:textColor="@color/dark_blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.5"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/alert_1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bar_line_bg"
+                android:drawableLeft="@drawable/keywords_alert"
+                android:drawablePadding="6dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Alert 1..."
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_blue" />
+
+            <EditText
+                android:id="@+id/alert_2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bar_line_bg"
+                android:drawableLeft="@drawable/keywords_alert"
+                android:drawablePadding="6dp"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:hint="Alert 2..."
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_blue" />
+
+            <EditText
+                android:id="@+id/alert_3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bar_line_bg"
+                android:drawableLeft="@drawable/keywords_alert"
+                android:drawablePadding="6dp"
+                android:ems="10"
+                   android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:hint="Alert 3..."
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_blue" />
+
+            <EditText
+                android:id="@+id/alert_4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bar_line_bg"
+                android:drawableLeft="@drawable/keywords_alert"
+                android:drawablePadding="6dp"
+                android:ems="10"
+                android:gravity="center"
+                   android:layout_marginTop="5dp"
+                android:hint="Alert 4..."
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_blue" />
+
+            <EditText
+                android:id="@+id/alert_5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bar_line_bg"
+                android:drawableLeft="@drawable/keywords_alert"
+                android:drawablePadding="6dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Alert 5..."
+                android:padding="10dp"
+                   android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/update_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/dark_blue"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableLeft="@drawable/alert_update"
+                android:drawablePadding="6dp"
+                android:text="Update Alerts"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
